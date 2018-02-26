@@ -1,89 +1,60 @@
-@import '../../style/variables';
-@import '../../style/media-queries';
-
-.header-content {
+.admin {
 	display: flex;
-	justify-content: space-between;
-    padding: 8px 15px;
-    background-color: #29292f;
-    color: #eaf1f9;
-    font-size: 22px;
-}
-
-.icon-menu {
-    cursor: pointer;
-
-    .bar1, .bar2, .bar3 {
-	    width: 35px;
-	    height: 5px;
-	    background-color: #9a9a9a;
-	    margin: 6px 0;
-	    transition: 0.4s;
-	}
-
-	&.change {
-
-		.bar1 {
-		    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-		    transform: rotate(-45deg) translate(-9px, 6px) ;
-		}
-
-		/* Fade out the second bar */
-		.bar2 {
-		    opacity: 0;
-		}
-
-		/* Rotate last bar */
-		.bar3 {
-		    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-		    transform: rotate(45deg) translate(-8px, -8px) ;
-		}
-	}
-	/* Rotate first bar */
-
-}
-
-.body-content {
-	display: flex;
-	justify-content: flex-start;
-	height: 100%;
-	position: relative;
-
-	.menu{
-		background-color: #666666;
-		width: 15%;
-		
-		ul {
-			list-style: none;
-			padding: 0;
+	height: 100vh;
 	
-			li {
-				font-size: 20px;
-				border-bottom: 1px solid #29292f;
+	.menu {
+		width: 20%;
+		background-color: #3ea3db;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
+		.logo {
+			width: 100%;
+			text-align: center;
+			border-bottom: 1px solid #70b1d6;
+
+			img {
+				padding: 20px;
+			}
+		}
+
+		ul {
+			width: 100%;
+			padding: 0;
+			list-style: none;
+			text-transform: uppercase;
+			text-align: center;
+
+			li {
+				padding: 20px;
 				a {
 					text-decoration: none;
-					color: $s-color;
-				    width: 100%;
-				    display: inline-block;
-				    cursor: pointer;
-				    padding: 10px; 
-				}
-
-				&:hover {
-					border-color: $o-color;
-					background-color: white;
-
-					a {
-						color: $o-color;
-					}
+					color: #fff;
 				}
 			}
 		}
 	}
 
 	.content {
-		padding: 10px;
-		width: 100%;
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+
+		.header {
+			width: 100%;
+			height: 84px;
+			border-bottom: 1px solid #3ea3db;
+			
+			span {
+				float: right;
+				padding: 30px;
+			}
+		}
+
+		.body {
+			padding: 10px 30px;
+			color: #555;
+		}
 	}
 }
