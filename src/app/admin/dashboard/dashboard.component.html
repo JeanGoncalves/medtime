@@ -1,0 +1,30 @@
+
+<section>
+
+  <div class="dashboard box-content">
+    <h1>Dashboard</h1>
+    <h2>Lista das empresas cadastradas</h2>
+
+    <div class="table-content">
+      <table cellspacing="0" cellpadding="0">
+        <thead>
+          <tr>
+            <th>Nome fantasia</th>
+            <th>CNPJ</th>
+            <th>Pedidos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let enterprise of enterprises">
+            <td>{{ enterprise.name }}</td>
+            <td align="center">{{ enterprise.cnpj }}</td>
+            <td align="center">
+              <button class="btn btn-link" (click)="onSelect(enterprise)">{{ enterprise.request.length }}</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+</section>
