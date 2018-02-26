@@ -64,13 +64,13 @@ export class InMemoryDataService implements InMemoryDbService {
             {
                 "id" : 1,
                 "name" : "Admin",
-                "email": "admin@email.com",
-                "password" : "MTIzNDU2Nzg=" // 12345678
+                "email": "admin@medtime.com",
+                "password" : "MTIzNDU2" // 123456
             }, {
                 "id" : 2,
-                "name" : "Teste",
-                "email": "teste@email.com",
-                "password" : "dGVzdGUxMjM=" // teste123
+                "name" : "Jean",
+                "email": "jean@medtime.com",
+                "password" : "MTIzNDU2" // 123456
             }, 
         ];
 

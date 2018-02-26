@@ -1,60 +1,43 @@
 
-<section>
-  
-  <div class="center">
-    <div class="box-center">
+<section class="login">
 
-      <div class="title">Login</div>
+  <h1>Bem vindo(a) ao <img src="./assets/medtimeLogin.png" alt="Medtime"></h1>
 
-      <span class="description">Efetue seu login para acessar o sistema</span>
 
-      <!-- Init Form -->
-      <form #form="ngForm" novalidate (ngSubmit)="onLogin(form.value, form.valid, form)">
+  <form #form="ngForm" novalidate (ngSubmit)="onLogin(form.value, form.valid, form)">
 
-        <div class="itens-input">
-          <label for="email">E-mail</label>
-          <input type="text" 
-            class="form-control"
-            name="email"
-            [ngModel]="input.email"
-            required
-            #loginName="ngModel">
-        </div>
+      <span class="description">Acesse usando sua conta Medtime</span>
 
-        <div class="itens-input">
-          <label for="password">Senha</label>
-          <input type="password" 
-            class="form-control"
-            name="password"
-            required
-            [ngModel]="input.password"
-            #password="ngModel">
-        </div>
-
-        <div class="itens-input text-center">
-          <small class="text-danger"
-            [hidden]="(loginName.valid && password.valid) || ((password.pristine || loginName.pristine) && !form.submitted)"
-            >E-mail ou senha incorreto. Tente novamente</small>
+      <div class="itens-input">
+        <input type="text" 
+          class="form-control"
+          name="email"
+          placeholder="* Email"
+          [ngModel]="input.email"
+          required
+          #loginName="ngModel">
         </div>
         
-        <div class="button-content">
-          <div>
-            <input type="checkbox" 
-              name="saveStorage" 
-              [ngModel]="input.saveStorage"
-              #saveStorage="ngModel"
-              >
-            Gravar Acesso
-          </div>
-          <button class="btn" type="submit" name="submit">Entrar</button>
-        </div>
+        <div class="itens-input">
+          <input type="password" 
+          class="form-control"
+          name="password"
+          placeholder="* Senha"
+          required
+          [ngModel]="input.password"
+          #password="ngModel">
+      </div>
+      
+      <div class="button-content">
+        <button class="submit" type="submit" name="submit">Entrar</button>
+      </div>
 
-        <div class="extra-links text-center">
-          <button class="btn btn-link" routerLink="/new-account">Criar uma nova conta</button>
-        </div>
-      </form>
+      <div class="itens-input error">
+        <small class="text-danger"
+          [hidden]="(loginName.valid && password.valid) || ((password.pristine || loginName.pristine) && !form.submitted)"
+          >E-mail ou senha incorreto. Tente novamente</small>
+      </div>
 
-    </div>
-  </div>
+    </form>
   
 </section>

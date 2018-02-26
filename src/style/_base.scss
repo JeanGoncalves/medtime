@@ -6,11 +6,8 @@ body {
 body {
     background-color: $s-color;
     margin: 0 auto;
-    min-height: 100%;
-}
-
-form {
-	width: 100%;
+	min-height: 100%;
+	font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 select {

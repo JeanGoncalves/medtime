@@ -8,7 +8,8 @@ import { User }                                 from '../model/user.model';
 
 @Component({
     selector: 'app-login',
-    templateUrl: './login.component.html'
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.scss']
 })
 export class LoginComponent  {
 
@@ -23,7 +24,7 @@ export class LoginComponent  {
     public input = {
         email: '',
         password: '',
-        saveStorage: false
+        saveStorage: true
     };
     public user: User;
 
@@ -37,11 +38,11 @@ export class LoginComponent  {
                         form.setValue({
                         email: login.email, 
                         password: null, 
-                        saveStorage: login.saveStorage
+                        saveStorage: true
                     });
                     return false;
                 }
-                this.authService.isLocalStorage = login.saveStorage;
+                this.authService.isLocalStorage = true;
                 this.authService.user = _user;
                 this.register();
             });
