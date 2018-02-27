@@ -28,6 +28,7 @@
 
 			li {
 				padding: 20px;
+				transition: all 100ms ease-in-out;
 
 				a {
 					text-decoration: none;
@@ -51,7 +52,9 @@
 				}
 
 				&:hover {
-					background-color: blue;
+					background-color: #6cafd5;
+					box-shadow: inset 0px -2px 8px #607D8B;
+					transition: all 100ms ease-in-out;
 				}
 			}
 		}
