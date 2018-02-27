@@ -3,10 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AdminComponent }           from './admin.component';
 import { DashboardComponent }       from './dashboard/dashboard.component';
-import { MyRequestComponent }       from './my-request/my-request.component';
 import { MyAccountComponent }       from './my-account/my-account.component';
-import { NewEnterpriseComponent }   from './new-enterprise/new-enterprise.component';
-import { NewRequestComponent }      from './new-request/new-request.component';
+import { DoctorComponent }          from './doctor/doctor.component';
 
 import { AuthGuard }                from '../auth-guard.service';
 
@@ -16,12 +14,8 @@ const adminRoutes: Routes = [
     component: AdminComponent,
     canActivateChild: [AuthGuard],
     children: [
-      { path: 'my-request',     component: MyRequestComponent },
-      { path: 'my-request/:id', component: MyRequestComponent },
       { path: 'my-account',     component: MyAccountComponent },
-      { path: 'new-enterprise', component: NewEnterpriseComponent },
-      { path: 'new-request',    component: NewRequestComponent },
-      { path: 'new-request/:id',component: NewRequestComponent },
+      { path: 'doctor',         component: DoctorComponent },
       { path: '',               component: DashboardComponent }
     ]
   }

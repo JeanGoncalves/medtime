@@ -7,9 +7,7 @@ import { TextMaskModule }           from 'angular2-text-mask';
 import { AdminRoutingModule }       from './admin-routing.module';
 import { DashboardComponent }       from './dashboard/dashboard.component';
 import { MyAccountComponent }       from './my-account/my-account.component';
-import { MyRequestComponent }       from './my-request/my-request.component';
-import { NewEnterpriseComponent }   from './new-enterprise/new-enterprise.component';
-import { NewRequestComponent }      from './new-request/new-request.component';
+import { DoctorComponent }          from './doctor/doctor.component';
 
 @NgModule({
   imports: [
@@ -22,9 +20,7 @@ import { NewRequestComponent }      from './new-request/new-request.component';
     AdminComponent,
     DashboardComponent,
     MyAccountComponent,
-    MyRequestComponent,
-    NewEnterpriseComponent,
-    NewRequestComponent
+    DoctorComponent
   ],
   providers: [
     AdminComponent

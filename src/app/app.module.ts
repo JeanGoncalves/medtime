@@ -12,9 +12,9 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { AuthGuard }            from './auth-guard.service';
 import { AuthService }          from './auth.service';
 
-import { EnterpriseService }    from './service/enterprise.service';
+import { DoctorService }        from './service/doctor.service';
+import { SpecialtyService }        from './service/specialty.service';
 import { UserService }          from './service/user.service';
-import { ProductService }       from './service/product.service';
 
 import { LoginComponent }       from './login/login.component';
 import { NewAccountComponent }  from './new-account/new-account.component';
@@ -41,9 +41,9 @@ import { EqualValidator }       from './equal-validator.directive';
   providers: [
     AuthGuard,
     AuthService,
-    EnterpriseService,
-    UserService,
-    ProductService
+    DoctorService,
+    SpecialtyService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

@@ -11,7 +11,6 @@ import { User }               from '../model/user.model';
 export class AdminComponent implements OnInit {
 
     public user: User;
-    public timeDescription: string = 'Bom dia';
 
     constructor(
         private authService: AuthService
@@ -19,15 +18,6 @@ export class AdminComponent implements OnInit {
 
     ngOnInit() {
         this.user = this.authService.user;
-
-        let date = new Date(Date.now());
-        let hour = date.getHours() +''+ date.getMinutes();
-
-        if (Number(hour) > 1800) {
-            this.timeDescription = 'Boa noite';
-        } else if(Number(hour) > 1200) {
-            this.timeDescription = 'Boa tarde';
-        }
     }
 
     logout() {

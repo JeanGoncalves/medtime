@@ -9,7 +9,10 @@
         <a routerLink="./">Dashboard</a>
       </li>
       <li>
-        <a routerLink="./my-account">Clientes</a>
+        <a routerLink="./doctor">Médicos</a>
+      </li>
+      <li>
+        <a routerLink="./my-account">Minha conta</a>
       </li>
       <li>
         <a routerLink="/" (click)="logout()">Sair</a>
@@ -27,49 +30,3 @@
   </section>
   
 </div>
-
-<!-- <header>
-  <div class="header-content">
-
-    <div>
-      <span>Olá {{ user.name }}, {{ timeDescription }}</span>
-    </div>
-
-    <div>
-      <div class="icon-menu" (click)="onChange(menuIcon, menu)" #menuIcon>
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
-    </div>
-
-  </div>
-</header> -->
-
-<!-- <div class="body-content">
-  <div class="menu" #menu>
-    <ul (click)="onChange(menuIcon, menu)">
-      <li>
-        <a routerLink="./">Início</a>
-      </li>
-      <li>
-        <a routerLink="./my-account">Minha Conta</a>
-      </li>
-      <li>
-        <a routerLink="./my-request">Meus pedidos</a>
-      </li>
-      <li>
-        <a routerLink="./new-request">Novo pedido</a>
-      </li>
-      <li>
-        <a routerLink="./new-enterprise">Nova Empresa</a>
-      </li>
-      <li>
-        <a routerLink="/" (click)="logout()">Sair</a>
-      </li>
-    </ul>
-  </div>
-  <div class="content">
-    <router-outlet></router-outlet>
-  </div>
-</div> -->
