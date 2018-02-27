@@ -6,16 +6,16 @@
     </div>
     <ul>
       <li>
-        <a routerLink="./">Dashboard</a>
+        <a routerLink="./" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
       </li>
       <li>
-        <a routerLink="./doctor">Médicos</a>
+        <a routerLink="./doctor" routerLinkActive="active">Médicos</a>
       </li>
       <li>
-        <a routerLink="./my-account">Minha conta</a>
+        <a routerLink="./my-account" routerLinkActive="active">Minha conta</a>
       </li>
       <li>
-        <a routerLink="/" (click)="logout()">Sair</a>
+        <a routerLink="/" (click)="logout()" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Sair</a>
       </li>
     </ul>
   </section>

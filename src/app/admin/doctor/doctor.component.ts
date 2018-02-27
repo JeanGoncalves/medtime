@@ -8,8 +8,7 @@ import { Specialty }	    				from '../../model/specialty.model';
 
 @Component({
   selector: 'app-doctor',
-  templateUrl: './doctor.component.html',
-  styleUrls: ['./doctor.component.scss']
+  templateUrl: './doctor.component.html'
 })
 export class DoctorComponent implements OnInit {
 

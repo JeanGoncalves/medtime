@@ -17,7 +17,6 @@ import { SpecialtyService }        from './service/specialty.service';
 import { UserService }          from './service/user.service';
 
 import { LoginComponent }       from './login/login.component';
-import { NewAccountComponent }  from './new-account/new-account.component';
 import { NotFoundComponent }    from './not-found/not-found.component';
 
 import { EqualValidator }       from './equal-validator.directive';
@@ -26,7 +25,6 @@ import { EqualValidator }       from './equal-validator.directive';
   declarations: [
     AppComponent,
     LoginComponent,
-    NewAccountComponent,
     NotFoundComponent,
     EqualValidator
   ],
