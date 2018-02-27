@@ -1,49 +1,52 @@
 <section>
-        
-    <h1>Doutores</h1>
-    <span>Lista de doutores cadastrados</span>
-    <button (click)="newDoctor()">Novo</button>
+    
+    <div class="row">
+        <h1>Doutores</h1>
+    </div>
 
-    <div class="table-content">
-        <table cellspacing="0" cellpadding="0">
-            <thead>
-                <tr>
-                    <th align="left">Nome</th>
-                    <th>Especialidade</th>
-                    <th>Hospital</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let doctor of doctors" >
+    <div class="row">
+        <span>Lista de doutores cadastrados</span>
+        <button class="btn btn-blue" (click)="newDoctor()">Novo</button>
+    </div>
+    
+    <div class="row">
+        <div class="table-content">
+            <div class="table">
 
-                    <td>
+                <div class="row header">
+                    <div class="cell">Nome</div>
+                    <div class="cell">Especialidade</div>
+                    <div class="cell">Hospital</div>
+                    <div class="cell icon"></div>
+                    <div class="cell icon"></div>
+                </div>
+                
+                <div class="row" *ngFor="let doctor of doctors">
+                    <div class="cell">
                         <span [hidden]="isDoctorEdit(doctor)">{{ doctor.name }}</span>
                         <input type="text" name="name" [(ngModel)]="doctor.name" [hidden]="!isDoctorEdit(doctor)">
-                    </td>
-
-                    <td align="center">
+                    </div>
+                    <div class="cell">
                         <span [hidden]="isDoctorEdit(doctor)">{{ doctor.specialty }}</span>
                         <select (change)="onChangeSpecialty($event.target.value, doctor)" [ngModel]="doctor.specialty" [hidden]="!isDoctorEdit(doctor)">
                             <option *ngFor="let specialty of specialties" [value]="specialty.name">{{ specialty.name }}</option>
                         </select>
-                    </td>
+                    </div>
+                    <div class="cell">
+                        <span [hidden]="isDoctorEdit(doctor)">{{ doctor.hospital }}</span>
+                        <input type="text" name="hospital" [(ngModel)]="doctor.hospital" [hidden]="!isDoctorEdit(doctor)">
+                    </div>
+                    <div class="cell icon">
+                        <button class="btn btn-icon btn-green" (click)="onEdit(doctor)" [hidden]="isDoctorEdit(doctor)"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-icon btn-blue" (click)="onSubmit(doctor)" [hidden]="!isDoctorEdit(doctor)"><i class="far fa-save"></i></button>
+                    </div>
+                    <div class="cell icon">
+                        <button class="btn btn-icon btn-red" (click)="onDelete(doctor)" [hidden]="isDoctorEdit(doctor)"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                </div>
 
-                    <td align="center">{{ doctor.hospital }}</td>
-
-                    <td align="center">
-                        <button class="btn btn-link" (click)="onEdit(doctor)" [hidden]="isDoctorEdit(doctor)">Editar</button>
-                        <button class="btn btn-link" (click)="onSubmit(doctor)" [hidden]="!isDoctorEdit(doctor)">Salvar</button>
-                    </td>
-
-                    <td align="center">
-                        <button class="btn btn-link" (click)="onDelete(doctor)" [hidden]="isDoctorEdit(doctor)">Deletar</button>
-                    </td>
-
-                </tr>
-            </tbody>
-        </table>
+            </div>
+        </div>
     </div>
 
 </section>
